@@ -1,2 +1,3 @@
 rootProject.name = 'airena-ethereum-poc'
+include 'nlp'
 

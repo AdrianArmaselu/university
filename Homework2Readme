@@ -1,0 +1,7 @@
+To compile the code:
+1. Make sure you have gradle installed
+2. Run gradle jar (on Unix) or gradlew jar (on Windows)
+3. The jar file at build/libs/nlp-homework2.jar from your current directory
+
+To run the program (assuming you are in the same directory as the jar file):
+java -jar nlp-homework2.jar -f <corpus.txt-path> -s1 <content of sentence 1> -s2 <content of sentence 2>

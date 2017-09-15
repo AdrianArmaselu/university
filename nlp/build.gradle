@@ -1,7 +1,8 @@
 group 'university'
-version '1.0-SNAPSHOT'
+version 'homework2'
 
 apply plugin: 'java'
+apply plugin: 'idea'
 
 sourceCompatibility = 1.8
 
@@ -9,12 +10,31 @@ repositories {
     mavenCentral()
 }
 
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.utdallas.edu.nlp'
+    }
+}
+
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 
+    // used for tokenization and creating ngrams
     // https://mvnrepository.com/artifact/edu.stanford.nlp/stanford-corenlp
     compile group: 'edu.stanford.nlp', name: 'stanford-corenlp', version: '3.8.0'
 
+    // To read from file
     // https://mvnrepository.com/artifact/commons-io/commons-io
     compile group: 'commons-io', name: 'commons-io', version: '2.5'
+
+    // for printing
+    // https://mvnrepository.com/artifact/com.massisframework/j-text-utils
+    compile group: 'com.massisframework', name: 'j-text-utils', version: '0.3.4'
+
+    // for parsing command line arguments
+    // https://mvnrepository.com/artifact/com.beust/jcommander
+    compile group: 'com.beust', name: 'jcommander', version: '1.72'
+
+
+
 }
